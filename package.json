@@ -1,5 +1,7 @@
 {
   "name": "trello2jira",
+  "author":"ellunium <jira2trello@gmail.com>",
+  "description":"An App to export Trello content in the format of CSV files to be imported to Jira through bulk import.",
   "productName": "trello2jira",
   "homepage": "https://github.com/ellunium/trello2jira#readme",
   "version": "0.1.0",
@@ -7,10 +9,40 @@
   "scripts": {
     "start": "electron .",
     "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=./assets/icons/mac/icon.icns --prune=true --out=release-builds",
-    "create-installer-mac": "electron-installer-dmg ./release-builds/trello2jira-darwin-x64/trello2jira.app trello2jira-installer --out=./release-builds --icon=./assets/icons/mac/icon.icns --overwrite"
+    "create-installer-mac": "electron-installer-dmg ./release-builds/trello2jira-darwin-x64/trello2jira.app trello2jira-installer --out=./release-builds --icon=./assets/icons/mac/icon.icns --overwrite",
+    "dist": "build",
+    "pack": "build --dir"
+  },
+  "build": {
+    "appId": "com.ellunium.trello2jira",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "assets/icons/win/icon.ico"
+    }
   },
   "devDependencies": {
     "electron": "^2.0.12",
+    "electron-builder": "^20.28.4",
     "electron-installer-dmg": "^2.0.0",
     "electron-packager": "^12.2.0"
   },
