@@ -22,7 +22,8 @@ Also, a TXT file will be creaed containing all the labels used in the cards that
   - components/labels
 
 **How to use it**
-  - Download the latest.
+  - [Download](https://github.com/ellunium/trello2jira/releases/tag/0.1.0) the latest.
   - Select the board you want to export
-  - Map the usernames, so that mentions will also work in Jira. If your usernames are the same in Trello and Jira, skip this.
+  - Map the usernames, so that mentions will also work in Jira. 
+    - If your usernames are the same in Trello and Jira, skip this.
   - Select a folder to save the CSV files.
