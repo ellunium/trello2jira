@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Trello to Jira Exporter</title>
+	<link rel="stylesheet" href="src/css/main.css">
+</head>
+
+<body>
+	<div class="formStyle">
+		<ul>
+			<li>
+				<label for="trelloConnected" id="connectedToTrelloLabel">Connect to Trello</label>
+				<div id="noTrelloApiConnection" class="divNotice">
+					<button class="button" id="connetToTrello">Connect</button>
+				</div>
+				<div id="trelloApiConnection" class="divNotice hide">
+					<span id="trelloConnected">
+						<div id="userDetails">
+							<div id="userAvatarContainer"><img id="userAvatar" src="http://trello-avatars.s3.amazonaws.com/a6b1e35a02d080bbcdadf981f9fef6f5/50.png"></div>
+							<div id="userNameContainer">
+								<span>Connected as:</span>
+								<span id="userName">Name of the user</span>
+							</div>
+						</div>
+					</span>
+				</div>
+				<span>Your login will be used to connect to Trello's API</span>
+			</li>
+			
+			<li>
+				<label for="selectBoard" id="selectBoardContainerLabel">Select a board to export</label>
+				<div id="selectBoardContainer" class="divNotice">
+					<select id="selectBoard">
+						<option value="">None</option>
+					</select>
+				</div>
+				<span>The selected board's lists will be exported as separate CSV files.</span>
+			</li>
+			<li id="userNamesContainerlistItem">
+				<label id="userNamesContainerLabel">Usernames mapping ⓘ</label>
+				<p class="divNotice">If your users' usernames are not the same on both Trello and Jira, map their usernames below.</p>
+				<p class="divNotice">These will be used to make sure the users are mentioned correctly in Jira once the board is imported.</p>
+			</li>
+			<li id="trelloUserNamesContainerListItem" style="width:168px; float:left">
+				<label id="trelloUserNamesContainerLabel">Username on Trello</label>
+				<div id="trelloUsers"></div>
+				<span>Trello</span>
+			</li>
+			<li id="jiraUserNamesContainerListItem" style="width:168px; float:right; margin-left: 8px">
+				<label id="jiraUserNamesContainerLabel">Username on Jira</label>
+				<div id="jiraUsers"></div>
+				<span>Jira</span>
+			</li>
+			<li>
+				<label for="saveLocation" id="saveLocationLabel">Select export location</label>
+				<div id="noFileSelectedContainer" class="divNotice">
+					<button class="button" id="selectFolder">Select folder</button>
+				</div>
+				<div id="fileSelectedContainer" class="divNotice hide">
+					<button class="button" id="changeFolder"><span id="fileSelected"></span></button>
+				</div>
+				<span>All the CSV files will be saved in this folder</span>
+			</li>
+			<li>
+				<input type="submit" value="--" style="height: 6440pxpx; background-color: #ffffff;" disabled="disabled">
+			</li>
+		</ul>
+	</div>
+	<div id="mainCTAContainer" class="mainCTA"><input type="submit" id="createCSVFilesBT" value="Export board to CSV files" disabled="disabled"></div>
+	<script>
+		// You can also require other files to run in this process
+		require('./renderer.js')
+	</script>
+</body>
+
+</html>

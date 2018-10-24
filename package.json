@@ -1,0 +1,28 @@
+{
+  "name": "trello2jira",
+  "productName": "trello2jira",
+  "homepage": "https://github.com/ellunium/trello2jira#readme",
+  "version": "0.1.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=./assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "create-installer-mac": "electron-installer-dmg ./release-builds/trello2jira-darwin-x64/trello2jira.app trello2jira-installer --out=./release-builds --icon=./assets/icons/mac/icon.icns --overwrite"
+  },
+  "devDependencies": {
+    "electron": "^2.0.12",
+    "electron-installer-dmg": "^2.0.0",
+    "electron-packager": "^12.2.0"
+  },
+  "dependencies": {
+    "dateformat": "^3.0.3",
+    "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "jquery": "^3.3.1",
+    "oauth": "^0.9.15",
+    "request": "^2.87.0",
+    "require": "^2.4.20",
+    "trello-web": "^1.0.2",
+    "url": "^0.11.0"
+  }
+}

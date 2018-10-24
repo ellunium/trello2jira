@@ -1,0 +1,323 @@
+
+html, body {
+	font-family: "jaf-facitweb","Helvetica Neue",Arial,sans-serif;
+	font-size: 14px;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+.formStyle {
+	max-width: 400px;
+	background: #fff;
+	border-radius: 4px;
+	padding: 20px;
+	padding-top: 28px;
+}
+
+.formStyle h1 {
+	display: block;
+	text-align: center;
+	padding: 0;
+	margin: 0px 0px 20px 0px;
+	color: #5C5C5C;
+	font-size: x-large;
+}
+
+.formStyle ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#userNamesContainerlistItem,
+#trelloUserNamesContainerListItem,
+#jiraUserNamesContainerListItem {
+	display: none;
+}
+
+
+.formStyle li {
+	display: block;
+	padding: 9px;
+	border: 1px solid #DDDDDD;
+	margin-bottom: 30px;
+	border-radius: 4px;
+}
+
+.formStyle li:last-child {
+	border: none;
+	margin-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	text-align: center;
+}
+
+.formStyle li:nth-last-child(2) {
+	margin-bottom: 16px;
+	clear: both;
+}
+
+.formStyle li>label {
+	display: block;
+	float: left;
+	margin-top: -19px;
+	background: #FFFFFF;
+	height: 14px;
+	padding: 2px 5px 2px 5px;
+	color: #B9B9B9;
+	font-size: 14px;
+	/* overflow: hidden; */
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.formStyle input[type="text"],
+.formStyle input[type="date"],
+.formStyle input[type="datetime"],
+.formStyle input[type="email"],
+.formStyle input[type="number"],
+.formStyle input[type="search"],
+.formStyle input[type="time"],
+.formStyle input[type="url"],
+.formStyle input[type="password"],
+.formStyle textarea {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	display: block;
+	height: 32px;
+	line-height: 32px;
+	outline: none;
+	border: none;
+	font-size: 16px;
+	padding: 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.formStyle input[type="file"] {
+	height: 32px;
+	line-height: 32px;
+	width: 100%;
+}
+
+.formStyle input[type="text"]:focus,
+.formStyle input[type="date"]:focus,
+.formStyle input[type="datetime"]:focus,
+.formStyle input[type="email"]:focus,
+.formStyle input[type="number"]:focus,
+.formStyle input[type="search"]:focus,
+.formStyle input[type="time"]:focus,
+.formStyle input[type="url"]:focus,
+.formStyle input[type="password"]:focus,
+.formStyle textarea:focus,
+.formStyle select:focus {}
+
+.formStyle li>span {
+	background: #F3F3F3;
+	display: block;
+	padding: 4px;
+	margin: 0 -9px -9px -9px;
+	text-align: center;
+	color: #C0C0C0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.formStyle textarea {
+	resize: none;
+}
+
+.mainCTA input[type="submit"],
+.formStyle input[type="submit"],
+.formStyle input[type="button"] {
+	background: #0077CC;
+	border: none;
+	padding: 16px 16px 16px 16px;
+	border-radius: 4px;
+	color: #FFFFFF;
+	cursor: pointer;
+	width: 100%;
+	font-size: 14px;
+	font-weight: bold;
+	max-width: 400px;
+}
+
+.mainCTA input[type=submit]:enabled:hover,
+.formStyle input[type=submit]:enabled:hover,
+.formStyle input[type="button"]:enabled:hover { 
+	background: #003580;
+	color: #FFFFFF; 
+}
+
+.mainCTA input[type=submit]:disabled,
+.formStyle input[type=submit]:disabled { 
+	background: #EDEDED;
+	color: #BDBDBD;
+	cursor: default;
+}
+
+a, a:visited {
+	color: #BDBDBD;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #0077CC;
+  	text-decoration: underline;
+	cursor: pointer;
+}
+
+a:active {
+	color: #0077CC;
+}
+
+.button {
+	background: #FFFFFF;
+	border: 1px solid #0077CC;
+	border-radius: 4px;
+	font-size: 14px;
+	color: #0077CC;
+	text-align: center;
+	line-height: 20px;
+	padding: 8px 16px 8px 16px;
+	margin: 8px 8px 8px 0px;
+	cursor: pointer;
+	width: 100%;
+}
+
+.formStyle select {
+	background: #FFFFFF;
+	border: 1px solid #0077CC;
+	outline: none;
+	border-radius: 4px;
+	color: #0077CC;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	display: inline-block;
+	height: 38px;
+	line-height: 38px;
+	font-size: 14px;
+	padding: 0;
+	margin: 8px 8px 8px 0px;
+}
+
+.button:hover, .formStyle select:hover {
+	background: #E9F0FA;
+}
+
+.divNotice{
+	margin: 8px;
+	color: #B9B9B9
+}
+.divNotice span {
+	display: block;
+	clear: right;
+}
+
+.hide {
+	display: none;
+}
+
+.invisible {
+	visibility: hidden;
+  	opacity: 0;
+  	transition: visibility 0s, opacity 0.5s linear;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: #DDDDDD;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #DDDDDD;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #DDDDDD;
+}
+
+.focus {
+  color: #383838 !important;
+}
+
+.error {
+  color: #E21111 !important;
+}
+
+.match {
+	color: #0AB21B !important;
+	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+}
+
+button > span {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    direction: rtl;
+	text-align: center;
+}
+
+input#apiToken {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+#userAvatarContainer {
+	height: 54px;
+	width: 54px;
+	float: left;
+	clear: right;
+}
+
+#userAvatarContainer img {
+	border-radius: 50%;
+}
+
+#userNameContainer {
+	font-size: 14px;
+	color: #383838;
+	font-weight: bold;
+	height: 54px;
+	padding-left: 8px;
+	line-height: 20px;
+	display: inline-block;
+}
+
+#userNameContainer > :first-child {
+	color: #5C5C5C;
+	font-weight: normal;
+}
+
+.usernames {
+	border-bottom: 1px solid #EDEDED !important; 
+}
+
+.mainCTA {
+	border-top: 1px solid #DDDDDD;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.8);
+	max-width: 440px;
+	padding: 20px;
+	margin-left: 0px;
+	margin-right: 0px;
+	position: fixed;
+	bottom: 0px;
+	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+}
+
+.atBottom{
+	border-top: 1px solid #ffffff;
+	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+}

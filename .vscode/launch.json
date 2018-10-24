@@ -1,0 +1,39 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Main",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
+            "runtimeArgs": [
+                ".",
+                "--enable-logging"
+            ],
+            "env": {},
+            "console": "integratedTerminal",
+            "sourceMaps": false,
+            "outFiles": []
+        },
+        {
+            "type": "electron",
+            "request": "launch",
+            "name": "Renderer",
+            "appDir": "${workspaceFolder}",
+            "sourceMaps": true
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Electron: All",
+            "configurations": [
+                "Main",
+                "Renderer"
+            ]
+        }
+    ]
+}
