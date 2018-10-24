@@ -1,5 +1,5 @@
 # trello2jira
-An App to export Trello content in the format of CSV files to be imported to Jira through bulk import.
+An App to export Trello Boards content in the format of CSV files to be imported to Jira through bulk import.
 
 I created this app because my Jira instance was not updated to a version that has and I needed to migrate/export some content from Trello to Jira and the only way to do it was through CSV. That's why trello2jira was created.
 
