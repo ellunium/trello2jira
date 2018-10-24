@@ -8,18 +8,18 @@ The app will create CSV files from the selected Trello board. Each CSV file repr
 Also, a TXT file will be creaed containing all the labels used in the cards that you might want to create in Jira to map when importing.
 
 **Informsation that will be available in the csv**
-- type of the issue: Story
-- date created
+- Type of the issue: Story
+- Date created
 - date last modified
-- summary
-- description
-  - card description
-  - link to original trello card
-  - card attachements
-  - actions
-    - comments
-    - attachments
-  - components/labels
+- Summary
+- Description
+  - Card description
+  - Link to original trello card
+  - Card attachements
+  - Actions
+    - Comments
+    - Attachments
+  - Components/labels
 
 **How to use it**
   - [Download](https://github.com/ellunium/trello2jira/releases/tag/0.1.0) the latest.
