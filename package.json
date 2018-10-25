@@ -4,7 +4,7 @@
   "description":"An App to export Trello content in the format of CSV files to be imported to Jira through bulk import.",
   "productName": "trello2jira",
   "homepage": "https://github.com/ellunium/trello2jira#readme",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
