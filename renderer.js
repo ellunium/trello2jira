@@ -272,7 +272,7 @@ createCSVFilesBT.addEventListener('click', (event) => {
 						rows += dateCreated + ";" + dateLastModified + ";";
 
 						//summary
-						rows += cards[i].name.trim() + ";";
+						rows += '"' + cards[i].name.trim() + '";';
 
 						//Since there's a lot of multiline in the description, wrap description with quotes to support multi-line and replace quotes with double quotes
 						if (cards[i].desc && cards[i].desc.length > 0) {
@@ -371,7 +371,7 @@ createCSVFilesBT.addEventListener('click', (event) => {
 						for (k = 0; k < labelsArray.length; k++) {
 							for (j = 0; j < cardLabels.length; j++) {
 								if (cardLabels[j].name == labelsArray[k]) {
-									rows += cardLabels[j].name;
+									rows += '"' + cardLabels[j].name + '"';
 								}
 							}
 							if (k != labelsArray.length - 1) rows += ";";
